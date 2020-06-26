@@ -16,7 +16,7 @@ export const Title = styled.Text`
 export const Footer = styled.View`
   position: absolute;
   bottom: 0;
-  top: 720px;
+  top: 85%;
   right: 0;
   left: -20px;
   width: 100%;

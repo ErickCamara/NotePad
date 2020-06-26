@@ -2,15 +2,17 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   margin-bottom: 10px;
+  width: 50%;
+  align-items: center;
 `;
 
 export const Note = styled.TouchableOpacity`
   width: 180px;
+  width: 95%;
   height: 195px;
   border-radius: 20px;
   background-color: #a7cbd8;
   padding-bottom: 20px;
-  margin-right: 10px;
 `;
 
 export const NoteTitle = styled.Text`
@@ -18,7 +20,6 @@ export const NoteTitle = styled.Text`
   padding-top: 20px;
   font-size: 16px;
   font-weight: bold;
-  /* padding-left: 10px; */
 `;
 
 export const NoteText = styled.Text`
