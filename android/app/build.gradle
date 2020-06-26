@@ -167,8 +167,9 @@ android {
         debug {
             buildConfigField "String", "CODEPUSH_KEY", '""'
         }
-         releaseStaging {
+        releaseStaging {
             buildConfigField "String", "CODEPUSH_KEY",'"yzVJgq30wqSjwmdpbOxCyy1NV0aq0ka0Jh6o2"'
+        }
         release {
             buildConfigField "String", "CODEPUSH_KEY",'"zGDiDev6cMVo3LUhBP7hQDFZvkRmtBb4IlCQb"'
         }
