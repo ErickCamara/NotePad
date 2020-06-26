@@ -19,6 +19,7 @@ export const Title = styled.Text`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 5px;
 `;
 
