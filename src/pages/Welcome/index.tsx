@@ -21,7 +21,7 @@ const Welcome: React.FC = () => {
     <Container>
       <Image source={Logo} />
       <Body>
-        <Title>Crie suas notas e organize suas atividades</Title>
+        <Title>Testando atualização via CodePush</Title>
         <SubTitle>
           Layout simples com o intuito de agilizar suas anotações antes que você
           possa esquecer delas!
