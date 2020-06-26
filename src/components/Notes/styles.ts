@@ -7,7 +7,6 @@ export const Container = styled.View`
 `;
 
 export const Note = styled.TouchableOpacity`
-  width: 180px;
   width: 95%;
   height: 195px;
   border-radius: 20px;

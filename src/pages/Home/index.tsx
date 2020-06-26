@@ -43,6 +43,7 @@ const Home: React.FC = () => {
         <FlatList
           style={{
             paddingHorizontal: 10,
+            width: '100%',
           }}
           data={notes}
           numColumns={2}

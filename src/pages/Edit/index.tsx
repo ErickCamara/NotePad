@@ -4,6 +4,8 @@ import FeatherIcon from 'react-native-vector-icons/Feather';
 import AsyncStorage from '@react-native-community/async-storage';
 import {useRoute, useNavigation} from '@react-navigation/native';
 
+import ModalPopUp from '../../components/ModalPopUp';
+
 import {Header, Container, Title, Text, Save} from './styles';
 
 interface NoteProps {
@@ -63,29 +65,6 @@ const Edit: React.FC = () => {
     }
   }, [data, navigation, routeParams.id, text, title]);
 
-  const handleDeleteNote = useCallback(() => {
-    let dataToRemove = data;
-    try {
-      console.log('entrou no handleDeleteNote 2', data);
-      dataToRemove.map((dataMap) => {
-        console.log('entrou aqui', dataMap);
-        if (dataMap.id === routeParams.id) {
-          console.log('entrou no handleDeleteNote');
-          console.log(dataMap);
-          dataToRemove.splice(Number(dataMap), 1);
-        }
-      });
-      setData(dataToRemove);
-
-      const jsonValue = JSON.stringify(data);
-      AsyncStorage.setItem('@note_info:data', jsonValue);
-
-      navigation.navigate('Home');
-    } catch (e) {
-      console.log(e);
-    }
-  }, [data, navigation, routeParams.id]);
-
   useEffect(() => {
     navigation.setOptions({
       headerShown: true,
@@ -99,13 +78,13 @@ const Edit: React.FC = () => {
           <Save onPress={handleSaveNote}>
             <FeatherIcon name="save" size={25} color="#FD8369" />
           </Save>
-          <Save onPress={handleDeleteNote}>
+          <ModalPopUp data={data} id={routeParams.id}>
             <FeatherIcon name="trash" size={25} color="#FD8369" />
-          </Save>
+          </ModalPopUp>
         </Header>
       ),
     });
-  }, [data, navigation, handleSaveNote, handleDeleteNote]);
+  }, [data, navigation, handleSaveNote, routeParams.id]);
 
   return (
     <Container>
