@@ -162,19 +162,19 @@ android {
             keyPassword 'android'
         }
     }
-    buildTypes {
-        debug {
-            // buildConfigField "String", "CODEPUSH_KEY", '""'
-        }
-        releaseStaging {
-            // buildConfigField "String", "CODEPUSH_KEY",'"yzVJgq30wqSjwmdpbOxCyy1NV0aq0ka0Jh6o2"'
-        }
-        release {
-          minifyEnabled enableProguardInReleaseBuilds
-          shrinkResources true
-            // buildConfigField "String", "CODEPUSH_KEY",'"zGDiDev6cMVo3LUhBP7hQDFZvkRmtBb4IlCQb"'
-        }
-    }
+    // buildTypes {
+    //     debug {
+    //         // buildConfigField "String", "CODEPUSH_KEY", '""'
+    //     }
+    //     releaseStaging {
+    //         // buildConfigField "String", "CODEPUSH_KEY",'"yzVJgq30wqSjwmdpbOxCyy1NV0aq0ka0Jh6o2"'
+    //     }
+    //     release {
+    //       minifyEnabled enableProguardInReleaseBuilds
+    //       shrinkResources true
+    //         // buildConfigField "String", "CODEPUSH_KEY",'"zGDiDev6cMVo3LUhBP7hQDFZvkRmtBb4IlCQb"'
+    //     }
+    // }
 
     packagingOptions {
         pickFirst "lib/armeabi-v7a/libc++_shared.so"
